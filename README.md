@@ -11,69 +11,55 @@ yarn install
 yarn dev
 ```
 
-If you add any additional services that need to be installed prior to running the application, please update the `Getting Started` section with the necessary commands.
-
 ### Create a landing page that
 
-- [ ] Tells the visitor what your drink is called
-- [ ] Includes an image (or images) that has your drink in it.
-- [ ] Describe the drink so everyone understands why it’s the greatest beverage ever.
-- [ ] A privacy focused “pay me later” order form that contains the following:
-- [ ] Customers name
-- [ ] Quantity of drinks to purchase
-- [ ] City
-- [ ] State/Province
-- [ ] Country
-- [ ] An order button
+- [x] Tells the visitor what your drink is called
+- [x] Includes an image (or images) that has your drink in it.
+- [x] Describe the drink so everyone understands why it’s the greatest beverage ever.
+- [x] A privacy focused “pay me later” order form that contains the following:
+- [x] Customers name
+- [x] Quantity of drinks to purchase
+- [x] City
+- [x] State/Province
+- [x] Country
+- [x] An order button
 
 ### After ordering
 
-- [ ] Confirmation that the order succeeded
-- [ ] Provide order confirmation number
-- [ ] Provide unique URL to see order confirmation & details
+- [x] Confirmation that the order succeeded
+- [x] Provide order confirmation number
+- [x] Provide unique URL to see order confirmation & details
 
 #### Notes
 
-- Images can be your own or from the internet. A great site for public domain photos is [Unsplash](https://www.unsplash.com).
-- "pay me later" means you are _not_ asking for any payment information.
-- Customers name should be optional, if the visitor does not supply one you should make up a name for them
-- Quantity of drinks to purchase should be optional, if the visitor does not supply an amount, you should decide the amount they are ordering
-- City, State/Province and Country are required
-- The order button can have any call to action text (button text) _except_ "Order" or "Submit".
-- Keep your customers privacy in mind throughout the ordering process
+## Features
 
-## Guidelines
+- **Customer Privacy Protection**  
+  Customers can only access their orders through **expirable, signed URLs**, securely generated using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) package.
 
-- This challenge is intended to take you a few hours of focused time.
-- Think of your submission as being a code review request. Submit code that you would personally like to review.
-- We will be reviewing it from the perspective of you being a member of the team.
-- If there are steps that extend beyond what we have supplied in our sample templates, document them.
-- Your PR description & loom video will be reviewed first and will be used to judge your submission. Include anything in there that you would like us to read. Decisions or tradeoffs that you made, document it.
+- **Future Enhancements**
+  - **Guest Users** will be able to request a new signed URL via email if their previous link expires.
+  - **Authenticated Users** will automatically receive a new signed URL using a **refreshed token**.
+  - Storing data to real database using ORM
+
+- **Optional Fields**  
+  Customer **name** and **quantity of drinks** are optional. If not provided, default values are generated using the [`faker`](https://www.npmjs.com/package/@faker-js/faker) package.
+
+- **Required Fields**  
+  `City`, `State/Province`, and `Country` are **mandatory** for order submission.
+
+- **Robust Data Validation**  
+  Validation is enforced on **both client and server sides** using the [`Zod`](https://www.npmjs.com/package/zod) schema validation library to ensure data integrity and consistency.
 
 ### AI Tooling
 
-In today's fast-paced world of AI and software engineering, tools like Cursor, Github CoPilot, and ChatGPT can be great companions to help boost your productivity. Feel free to use these tools during this technical assessment, but make sure you understand the code suggestions they provide.
+ **AI-Assisted UI and Testing**  
+  The UI components and test cases were designed and generated with the help of **ChatGPT**, accelerating development while maintaining code quality and accessibility.
 
-## What we look for
 
-When we are reviewing your Pull Request, these are the areas we will be focusing on:
-
-- We care about code quality - Does it follow good coding practices & guidelines?
-- We care about functionality - Does it do what it should do?
-- We care about maintainability - Will this code be easy to maintain and build off of?
-- We care about performance - Is it fast?
-- We care about readability - Is it easy to understand?
-- We care about testing - Is it well tested?
-- We care about usability - Is it easy to use?
 
 ### Loom Submission
 
 As a remote company, great video communication is crucial for us. We value crisp Loom demos that showcase your personality and hankering for your work. Your submission should be under 5 minutes and include a very brief introduction of yourself, a walkthrough of your code, and the decisions you made while crafting your solution. If you used AI tooling, please highlight what tools you used, where you used them, and how they helped (or hindered) you. This video will help us understand your thought process and how you
 approach problem-solving in a remote environment. Include the loom video in your email to us when you submit your solution.
 
-### Next steps
-
-1. Clone this repo
-2. Code
-3. Create a Pull Request as your submission
-4. Contact us via email to let us know you've submitted your solution
