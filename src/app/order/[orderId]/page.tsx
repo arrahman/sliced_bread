@@ -24,8 +24,6 @@ export default function ConfirmationPage() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
 
-  console.log("token", token);
-
   const [order, setOrder] = useState<Order | null>(null);
   const [error, setError] = useState<string | null>(null);
 

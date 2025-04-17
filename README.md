@@ -60,6 +60,5 @@ yarn dev
 
 ### Loom Submission
 
-As a remote company, great video communication is crucial for us. We value crisp Loom demos that showcase your personality and hankering for your work. Your submission should be under 5 minutes and include a very brief introduction of yourself, a walkthrough of your code, and the decisions you made while crafting your solution. If you used AI tooling, please highlight what tools you used, where you used them, and how they helped (or hindered) you. This video will help us understand your thought process and how you
-approach problem-solving in a remote environment. Include the loom video in your email to us when you submit your solution.
+- [`Project Presentation`](https://www.loom.com/share/35703d0007b04c349ae5dcea7e1c0f95)
 
